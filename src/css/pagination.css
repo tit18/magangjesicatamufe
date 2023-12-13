@@ -1,0 +1,20 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    margin-left: auto; /* Menggeser ke kanan */
+    
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    /* border: 1px solid #ccc; */
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .pagination button.active {
+    background-color: #E4262C;
+    color: #fff;
+  }
