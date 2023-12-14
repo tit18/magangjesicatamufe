@@ -333,7 +333,7 @@ class Historytamu extends Component {
 
         <div className="filtering flex flex-col md:flex-row justify-end md:mr-20 rounded p-4 md:p-0">
           <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:items-start">
-            <span className="block w-auto text-md md:my-2 md:mr-4 text-slate-700">
+            <span className="block w-auto text-md md:my-4 md:mr-4 text-slate-700">
               Filter By
             </span>
             <input
