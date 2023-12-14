@@ -1,0 +1,1 @@
+export const BASE_URL = `http://103.93.130.122:4443/magangjesicatamufe/build`

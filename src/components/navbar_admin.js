@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { BASE_URL } from "../../global";
 
 function NavbarAdmin() {
   const location = useLocation();
@@ -9,7 +10,7 @@ function NavbarAdmin() {
       <div className="flex w-full">
         <img
           className="w-24 h-6 ml-6 mr-5 my-2"
-          src="/assets/smktelkom.png"
+          src={`${BASE_URL}/assets/smktelkom.png`}
           alt="Logo"
         />
         <div className="ms-auto flex items-center pe-5 text-sm">

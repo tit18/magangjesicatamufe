@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 import Navbar from "../components/navbar_user";
 import Footer from "../components/footer_user";
+import { BASE_URL } from "../../global";
 
 class FormTamu extends React.Component {
   constructor() {
@@ -396,7 +397,7 @@ class FormTamu extends React.Component {
                   {/* Modal Content Goes Here */}
                   <div className="p-6">
                     <img
-                      src="./assets/succes.png"
+                      src={`${BASE_URL}/assets/succes.png`}
                       className="px-16"
                       alt="Succes"
                     ></img>

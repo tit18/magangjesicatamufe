@@ -122,6 +122,7 @@
 
 import React from "react";
 import axios from 'axios';
+import { BASE_URL } from "../../global";
 
 export default class Login extends React.Component {
     constructor() {
@@ -192,7 +193,7 @@ export default class Login extends React.Component {
         return (
             <div className="dashboard1 bg-white">
                 <div className="text-center">
-                        <img className="block md:hidden w-20 h-20 mx-auto mb-4" src="/assets/ts1.svg" alt="Logo" />
+                        <img className="block md:hidden w-20 h-20 mx-auto mb-4" src={`${BASE_URL}/assets/ts1.svg`} alt="Logo" />
                         <h3 className="block md:hidden text-xl font-semibold text-black mb-2">Buku Tamu</h3>
                         <p className="block md:hidden text-sm text-black">SMK Telkom Malang</p>
                     </div>
@@ -200,11 +201,11 @@ export default class Login extends React.Component {
                     <div className="max-w-4xl mx-auto my-auto h-screen px-4 flex items-center justify-center">
                         <div className="bg-white w-full md:w-full rounded-lg border-2 border-gray-300 shadow-md flex flex-wrap">
                         <div className="sm:w-max md:w-1/2">
-                                <img className="object-cover w-full h-full md:w-auto md:h-auto bg-cover rounded-lg" src="../assets/ilustrasi.png" alt="" />
+                                <img className="object-cover w-full h-full md:w-auto md:h-auto bg-cover rounded-lg" src={`${BASE_URL}/assets/ilustrasi.png`} alt="" />
                             </div>
                             <div className="sm:w-max md:w-1/2 p-4">
                             <div className="text-center">
-                                <img className="hidden md:block w-20 h-20 mx-auto mb-4" src="/assets/ts1.svg" alt="Logo" />
+                                <img className="hidden md:block w-20 h-20 mx-auto mb-4" src={`${BASE_URL}/assets/ts1.svg`} alt="Logo" />
                                 <h3 className="hidden md:block text-xl font-semibold text-black mb-2">Buku Tamu</h3>
                                 <p className="hidden md:block text-sm text-black">SMK Telkom Malang</p>
                             </div>

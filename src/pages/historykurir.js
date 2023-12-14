@@ -175,6 +175,21 @@ class Historykurir extends Component {
     });
   };
 
+  handlePrevPage = () => {
+    if (this.state.currentPage > 1) {
+      this.handlePageChange(this.state.currentPage - 1);
+    }
+  };
+
+  handleNextPage = () => {
+    const { currentPage, itemsPerPage, filteredData } = this.state;
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+    if (currentPage < totalPages) {
+      this.handlePageChange(currentPage + 1);
+    }
+  };
+
   handleClose = () => {
     $("#modal_info").hide();
     $("#modal_checkout").hide();
@@ -243,6 +258,16 @@ class Historykurir extends Component {
     const totalPages = Math.ceil(
       this.state.filteredData.length / this.state.itemsPerPage
     );
+
+    // Tentukan jumlah halaman yang ingin ditampilkan pada navigasi pagination
+    const maxPageItems = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxPageItems / 2));
+    let endPage = Math.min(totalPages, startPage + maxPageItems - 1);
+
+    // Jika jumlah halaman yang tersedia kurang dari maksimal, sesuaikan start dan end
+    if (endPage - startPage + 1 < maxPageItems) {
+      startPage = Math.max(1, endPage - maxPageItems + 1);
+    }
 
     return (
       <div>
@@ -326,15 +351,24 @@ class Historykurir extends Component {
 
           {totalPages > 1 && (
             <div className="pagination pt-8 pb-4 px-10">
-              {Array.from({ length: totalPages }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => this.handlePageChange(index + 1)}
-                  className={currentPage === index + 1 ? "active" : ""}
-                >
-                  {index + 1}
-                </button>
-              ))}
+              <button onClick={() => this.handlePrevPage()}>{"<< Prev"}</button>
+
+              {/* Tampilkan navigasi halaman */}
+              {Array.from({ length: endPage - startPage + 1 }).map(
+                (_, index) => (
+                  <button
+                    key={startPage + index}
+                    onClick={() => this.handlePageChange(startPage + index)}
+                    className={
+                      currentPage === startPage + index ? "active" : ""
+                    }
+                  >
+                    {startPage + index}
+                  </button>
+                )
+              )}
+
+              <button onClick={() => this.handleNextPage()}>{"Next >>"}</button>
             </div>
           )}
         </div>
