@@ -86,75 +86,38 @@ class FormTamu extends React.Component {
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
-
-    this.setState((prevState) => {
-      const { formData, allUsers } = prevState;
-
-      if (name === "janjian") {
-        return {
-          formData: {
-            ...formData,
-            [name]: value === "true",
-          },
-        };
-      }
-
-      if (name === "nama_dituju") {
-        const selectedUser = allUsers.find((user) => user.nama === value) || {};
-        const { uuid } = selectedUser;
-
-        return {
-          formData: {
-            ...formData,
-            uuid_user: uuid || "",
-            [name]: value,
-          },
-        };
-      }
-
-      return {
+  
+    if (name === "janjian") {
+      // Convert value to boolean
+      const janjianValue = value === "true";
+  
+      this.setState((prevState) => ({
         formData: {
-          ...formData,
+          ...prevState.formData,
+          [name]: janjianValue,
+        },
+      }));
+    } else if (name === "nama_dituju") {
+      const selectedUser = this.state.allUsers.find(
+        (user) => user.nama === value
+      );
+  
+      this.setState((prevState) => ({
+        formData: {
+          ...prevState.formData,
+          uuid_user: selectedUser ? selectedUser.uuid : "",
           [name]: value,
         },
-      };
-    });
+      }));
+    } else {
+      this.setState((prevState) => ({
+        formData: {
+          ...prevState.formData,
+          [name]: value,
+        },
+      }));
+    }
   };
-  
-  // handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  
-  //   if (name === "janjian") {
-  //     // Convert value to boolean
-  //     const janjianValue = value === "true";
-  
-  //     this.setState((prevState) => ({
-  //       formData: {
-  //         ...prevState.formData,
-  //         [name]: janjianValue,
-  //       },
-  //     }));
-  //   } else if (name === "nama_dituju") {
-  //     const selectedUser = this.state.allUsers.find(
-  //       (user) => user.nama === value
-  //     );
-  
-  //     this.setState((prevState) => ({
-  //       formData: {
-  //         ...prevState.formData,
-  //         uuid_user: selectedUser ? selectedUser.uuid : "",
-  //         [name]: value,
-  //       },
-  //     }));
-  //   } else {
-  //     this.setState((prevState) => ({
-  //       formData: {
-  //         ...prevState.formData,
-  //         [name]: value,
-  //       },
-  //     }));
-  //   }
-  // };
   
   
 
@@ -198,8 +161,6 @@ class FormTamu extends React.Component {
   render() {
     const { photoPreview, isModalVisible } = this.state;
     const { allUsers } = this.state;
-    const janjianText = this.state.formData.janjian ? "Ada" : "Tidak";
-
 
     return (
       <div>
