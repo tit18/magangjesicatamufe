@@ -74,7 +74,7 @@
 // export default App;
 
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
@@ -104,9 +104,9 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path='*' element={<NotFound />} />
           <Route path="/form_tamu" element={<FormTamu />} />
           <Route path="/form_kurir" element={<FormKurir />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     );
