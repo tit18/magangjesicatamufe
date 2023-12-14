@@ -93,7 +93,8 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/historytamu" element={<Historytamu />} />
           <Route path="/historykurir" element={<Historykurir />} />
-          
+          <Route path="/form_tamu" element={<FormTamu />} />
+          <Route path="/form_kurir" element={<FormKurir />} />
         </Routes>
       </Router>
 
