@@ -74,7 +74,7 @@ function Footer() {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/");
+    navigate("/magangjesicatamufe/build/");
     window.location.reload();
   };
 
