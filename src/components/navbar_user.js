@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BASE_URL } from "../../global";
+import { BASE_URL } from "../global";
 
 function Navbar() {
   const location = useLocation();

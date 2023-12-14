@@ -3,7 +3,7 @@ import React from "react";
 import axios from "axios";
 import Navbar from "../components/navbar_user";
 import Footer from "../components/footer_user";
-import { BASE_URL } from "../../global";
+import { BASE_URL } from "../global";
 
 class FormKurir extends React.Component {
   constructor() {

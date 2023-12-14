@@ -122,7 +122,7 @@
 
 import React from "react";
 import axios from 'axios';
-import { BASE_URL } from "../../global";
+import { BASE_URL } from "../global";
 
 export default class Login extends React.Component {
     constructor() {
