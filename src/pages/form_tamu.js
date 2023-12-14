@@ -19,7 +19,7 @@ class FormTamu extends React.Component {
         nama_dituju: "",
         keperluan: "",
         jumlah_tamu: "",
-        janjian: "",
+        janjian: false,
         tanggal_masuk: `${today.toISOString().substring(0,10)} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`,
         foto: null,
       },
@@ -265,7 +265,7 @@ class FormTamu extends React.Component {
                 <select
                   id="janjian"
                   name="janjian"
-                  value={this.state.formData.janjian}
+                  value={this.state.formData.janjian ? "true" : "false"}
                   onChange={this.handleInputChange}
                   className="mt-1 w-full md:w-auto pl-3 py-2 bg-white focus:border-red-300 focus:outline-none focus:ring-opacity-40
                   border-2 shadow-sm placeholder-slate-400 rounded-md text-sm"
