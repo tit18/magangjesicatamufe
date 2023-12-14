@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import Navbar from "../components/navbar_admin";
-import Footer from "../components/footer";
+import FooterAdmin from "../components/footer_admin";
 import "../css/pagination.css";
 import $ from "jquery";
 
@@ -590,7 +590,7 @@ class Historytamu extends Component {
           </div>
         </div>
 
-        <Footer />
+        <FooterAdmin />
       </div>
     );
   }

@@ -64,7 +64,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
 
-function Footer() {
+function FooterAdmin() {
   const user = {
     photo: localStorage.getItem("userPhoto"),
     email: localStorage.getItem("userEmail"),
@@ -110,4 +110,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterAdmin;

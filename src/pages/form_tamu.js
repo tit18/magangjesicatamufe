@@ -2,7 +2,7 @@
 import React from "react";
 import axios from "axios";
 import Navbar from "../components/navbar_user";
-import Footer from "../components/footer";
+import Footer from "../components/footer_user";
 
 class FormTamu extends React.Component {
   constructor() {
