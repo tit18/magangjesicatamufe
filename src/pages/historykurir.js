@@ -56,7 +56,7 @@ class Historykurir extends Component {
   };
 
   handleCheckout = (item) => {
-    const bearerToken = localStorage.getItem("token");  
+    // const bearerToken = localStorage.getItem("token");  
     const isConfirmed = window.confirm(
       "Apakah Anda yakin ingin melakukan checkout?"
     );
@@ -190,7 +190,7 @@ class Historykurir extends Component {
   };
 
   renderTableRows = () => {
-    const { filteredData } = this.state;
+    // const { filteredData } = this.state;
     const currentItems = this.getCurrentItems();
 
     return currentItems.map((item) => (
@@ -239,7 +239,7 @@ class Historykurir extends Component {
   };
 
   render() {
-    const { selectedDate, keyword, currentPage } = this.state;
+    const { keyword, currentPage } = this.state;
     const totalPages = Math.ceil(
       this.state.filteredData.length / this.state.itemsPerPage
     );

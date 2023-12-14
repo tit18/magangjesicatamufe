@@ -255,7 +255,7 @@ class Historytamu extends Component {
   };
 
   renderTableRows = () => {
-    const { filteredData } = this.state;
+    // const { filteredData } = this.state;
     const currentItems = this.getCurrentItems();
 
     return currentItems.map((item) => (
@@ -322,7 +322,7 @@ class Historytamu extends Component {
   };
 
   render() {
-    const { selectedDate, keyword, currentPage } = this.state;
+    const { keyword, currentPage } = this.state;
     const totalPages = Math.ceil(
       this.state.filteredData.length / this.state.itemsPerPage
     );
