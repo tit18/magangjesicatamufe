@@ -1,7 +1,7 @@
 {
   "name": "sesi-1",
   "private": true,
-  "homepage": "http://103.93.130.122:4443/magangjesicatamufe/build",
+  "homepage": "http://103.93.130.122:4443",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
