@@ -5,21 +5,31 @@ function NavbarAdmin() {
   const location = useLocation();
 
   return (
-    <nav className="navbar max-w-max md:w-auto mt-4 h-max mx-auto border-2 border-gray shadow-xl rounded-3xl bg-white flex items-center">
-      <img className="w-24 h-6 ml-2 mr-20 my-2" src="/assets/smktelkom.png" alt="Logo" />
-      <div className="flex text-sm">
-        <Link
-          to="/historytamu"
-          className={`tamu font-semibold focus:outline-none hover:text-red-500 ml-auto mx-2 ${location.pathname === "/historytamu" && "text-red-500"}`}
-        >
-          <span className="ml-auto">Tamu Umum</span>
-        </Link>
-        <Link
-          to="/historykurir"
-          className={`tamu font-semibold focus:outline-none hover:text-red-500 mx-2 ${location.pathname === "/historykurir" && "text-red-500"}`}
-        >
-          <span className="ml-auto">Kurir/Titip Barang</span>
-        </Link>
+    <nav className="navbar w-full lg:w-[900px] mt-4 h-max mx-auto border-2 border-gray shadow-xl rounded-3xl bg-white flex items-center">
+      <div className="flex w-full">
+        <img
+          className="w-24 h-6 ml-6 mr-5 my-2"
+          src="/assets/smktelkom.png"
+          alt="Logo"
+        />
+        <div className="ms-auto flex items-center pe-5 text-sm">
+          <Link
+            to="/historytamu"
+            className={`tamu font-semibold focus:outline-none hover:text-red-500 ml-auto mx-2 ${
+              location.pathname === "/historytamu" && "text-red-500"
+            }`}
+          >
+            <span className="ml-auto">Tamu Umum</span>
+          </Link>
+          <Link
+            to="/historykurir"
+            className={`tamu font-semibold focus:outline-none hover:text-red-500 mx-2 ${
+              location.pathname === "/historykurir" && "text-red-500"
+            }`}
+          >
+            <span className="ml-auto">Kurir/Titip Barang</span>
+          </Link>
+        </div>
       </div>
     </nav>
   );
@@ -27,11 +37,8 @@ function NavbarAdmin() {
 
 export default NavbarAdmin;
 
-
-
 // import { useNavigate } from "react-router-dom";
 // import FontAwesomeIcon from "@fortawesome/react-fontawesome"
-
 
 // const navigate = useNavigate();
 

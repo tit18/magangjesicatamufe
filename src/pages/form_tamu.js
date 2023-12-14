@@ -87,7 +87,17 @@ class FormTamu extends React.Component {
   handleInputChange = (e) => {
     const { name, value } = e.target;
   
-    if (name === "nama_dituju") {
+    if (name === "janjian") {
+      // Convert value to boolean
+      const janjianValue = value === "ada";
+  
+      this.setState((prevState) => ({
+        formData: {
+          ...prevState.formData,
+          [name]: janjianValue,
+        },
+      }));
+    } else if (name === "nama_dituju") {
       const selectedUser = this.state.allUsers.find(
         (user) => user.nama === value
       );
@@ -108,6 +118,7 @@ class FormTamu extends React.Component {
       }));
     }
   };
+  
   
 
   handleSimpan = () => {

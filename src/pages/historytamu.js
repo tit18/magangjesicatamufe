@@ -331,20 +331,20 @@ class Historytamu extends Component {
       <div>
         <Navbar />
 
-        <div className="filtering flex flex-col md:flex-row items-center justify-center rounded p-4 md:p-0">
+        <div className="filtering flex flex-col md:flex-row justify-end md:mr-20 rounded p-4 md:p-0">
           <div className="flex flex-col md:flex-row w-full md:w-auto items-center md:items-start">
-            <span className="block text-md text-lg md:my-6 md:mr-2 text-slate-700">
+            <span className="block w-auto text-md md:my-2 md:mr-4 text-slate-700">
               Filter By
             </span>
             <input
               type="date"
               name="filter_tgl"
-              className="md:my-6 md:ml-2 md:mr-96 px py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 rounded-md sm:text-sm"
+              className="w-full md:-w-full px-4 py-2 bg-white border-2 mt-2 border-gray-400 rounded-md"
               placeholder="Select Start Date"
               onChange={this.handleDateChange}
             />
           </div>
-          <div className="md:ml-96 my-2 md:my-0 ">
+          <div className="mx-4 my-2 md:my-0 ">
             <ul>
               {this.getCurrentItems().map((item) => (
                 <li key={item.nama}>{item.nama}</li>
@@ -352,7 +352,7 @@ class Historytamu extends Component {
             </ul>
             <input
               type="text"
-              className="w-full px-4 py-2 bg-white border-2 border-gray-400 rounded-md focus:border-red-300 focus:ring-red-500 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="w-full px-4 py-2 mt-2 bg-white border-2 border-gray-400 rounded-md"
               placeholder="Search..."
               name="keyword"
               value={keyword}

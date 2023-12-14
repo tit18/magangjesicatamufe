@@ -208,7 +208,7 @@ export default class Login extends React.Component {
                                 <h3 className="hidden md:block text-xl font-semibold text-black mb-2">Buku Tamu</h3>
                                 <p className="hidden md:block text-sm text-black">SMK Telkom Malang</p>
                             </div>
-                            <form onSubmit={this.handleLogin} className="mt-4">
+                            <form onSubmit={this.handleLogin} className="mt-4 sm:w-auto md:w-auto">
                                 <div className="mb-4">
                                     <label htmlFor="email" className="text-sm font-medium text-gray-600">Email</label>
                                     <input

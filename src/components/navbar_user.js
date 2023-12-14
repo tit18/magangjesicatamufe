@@ -1,18 +1,37 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
   return (
-    <nav class="navbar max-w-max md:w-auto mt-4 h-max mx-auto border-2 border-gray shadow-xl rounded-3xl bg-white flex items-center">
-    <img class="w-24 h-6 mx-6 my-2" src="/assets/smktelkom.png" alt="Logo" />
-    <div class="ml-4 flex text-sm">
-        <a href="/form_tamu" class="tamu font-semibold focus:outline-none hover:text-red-500 ml-auto mx-6">
-            <span class="ml-auto">Tamu Umum</span>
-        </a>
-        <a href="/form_kurir" class="tamu font-semibold focus:outline-none hover:text-red-500 mx-6">
-            <span class="ml-auto">Kurir/Titip Barang</span>
-        </a>
-    </div>
-</nav>
+    <nav className="navbar w-full lg:w-[900px] mt-4 h-max mx-auto border-2 border-gray shadow-xl rounded-3xl bg-white flex items-center">
+      <div className="flex w-full">
+        <img
+          className="w-24 h-6 ml-6 mr-5 my-2"
+          src="/assets/smktelkom.png"
+          alt="Logo"
+        />
+        <div className="ms-auto flex items-center pe-5 text-sm">
+          <Link
+            to="/form_tamu"
+            className={`tamu font-semibold focus:outline-none hover:text-red-500 ml-auto mx-2 ${
+              location.pathname === "/form_tamu" && "text-red-500"
+            }`}
+          >
+            <span className="ml-auto">Tamu Umum</span>
+          </Link>
+          <Link
+            to="/form_kurir"
+            className={`tamu font-semibold focus:outline-none hover:text-red-500 mx-2 ${
+              location.pathname === "/form_kurir" && "text-red-500"
+            }`}
+          >
+            <span className="ml-auto">Kurir/Titip Barang</span>
+          </Link>
+        </div>
+      </div>
+    </nav>
 
   );
 }
