@@ -325,5 +325,4 @@ class FormKurir extends React.Component {
 
 export default FormKurir;
 
-
-// eyo
+// yo men
