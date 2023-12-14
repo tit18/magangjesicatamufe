@@ -339,7 +339,7 @@ class Historytamu extends Component {
             <input
               type="date"
               name="filter_tgl"
-              className="w-full md:-w-full px-4 py-2 bg-white border-2 mt-2 border-gray-400 rounded-md"
+              className="w-full md:w-auto px-4 py-2 mt-2 bg-white border-2 border-gray-400 rounded-md"
               placeholder="Select Start Date"
               onChange={this.handleDateChange}
             />
