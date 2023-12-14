@@ -89,7 +89,7 @@ class FormTamu extends React.Component {
   
     if (name === "janjian") {
       // Convert value to boolean
-      const janjianValue = value === "ada";
+      const janjianValue = value === "true";
   
       this.setState((prevState) => ({
         formData: {
@@ -274,8 +274,8 @@ class FormTamu extends React.Component {
                   <option value="" disabled hidden>
                     Pilih Opsi
                   </option>
-                  <option value="ada">Ada</option>
-                  <option value="tidak">Tidak</option>
+                  <option value="true">Ada</option>
+                  <option value="false">Tidak</option>
                 </select>
               </div>
             </div>
