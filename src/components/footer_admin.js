@@ -76,7 +76,7 @@ function FooterAdmin() {
     localStorage.clear();
     // navigate("/magangjesicatamufe/build/");
     // window.location.reload();
-    window.location.href = "/magangjesicatamufe/build/";
+    window.location.href = "/magangjesicatamufe/build";
   };
 
   return (
@@ -99,10 +99,8 @@ function FooterAdmin() {
       <div className="container mx-auto flex justify-between items-center">
         <ul className="flex">
           <li className="my-px" onClick={handleLogout}>
-            <a href="/">
               <FontAwesomeIcon icon={faPowerOff} size="lg ml-6" />
               <span className="ml-2">Logout</span>
-            </a>
           </li>
         </ul>
         <p className="text-[20px] italic mr-8">The real informatic schools</p>
