@@ -168,11 +168,9 @@ export default class Login extends React.Component {
                 if (response.data.logged === "true") {
                     const token = response.data.token;
                     const nama = response.data.nama;
-                    const password = response.data.password;
 
                     localStorage.setItem("token", token);
                     localStorage.setItem("nama", nama);
-                    localStorage.setItem("password", password);
 
                     alert("Succes to Login");
                     window.location.href = "/magangjesicatamufe/build/#/historytamu";
