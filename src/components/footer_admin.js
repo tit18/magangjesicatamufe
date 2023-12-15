@@ -77,7 +77,7 @@ function FooterAdmin() {
     localStorage.clear();
     // navigate("/magangjesicatamufe/build/");
     // window.location.reload();
-    window.location.href = `${BASE_URL}`;
+    window.location.href = `${BASE_URL}/`;
   };
 
   return (
