@@ -74,8 +74,9 @@ function FooterAdmin() {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/magangjesicatamufe/build/");
-    window.location.reload();
+    // navigate("/magangjesicatamufe/build/");
+    // window.location.reload();
+    window.location.href = "/magangjesicatamufe/build/";
   };
 
   return (
