@@ -107,7 +107,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/form_tamu" element={<FormTamu />} />
           <Route path="/form_kurir" element={<FormKurir />} />
-          <Route path='*' element={<NotFound />} />
+{/*<Route path='*' element={<NotFound />} />*/}
         </Routes>
       </Router>
     );
