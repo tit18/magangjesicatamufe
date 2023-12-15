@@ -63,6 +63,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
+import { BASE_URL } from "../global";
 
 function FooterAdmin() {
   const user = {
@@ -76,7 +77,7 @@ function FooterAdmin() {
     localStorage.clear();
     // navigate("/magangjesicatamufe/build/");
     // window.location.reload();
-    window.location.href = "/magangjesicatamufe/build";
+    window.location.href = `${BASE_URL}`;
   };
 
   return (
