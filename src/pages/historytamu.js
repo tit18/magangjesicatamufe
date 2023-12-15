@@ -31,7 +31,7 @@ class Historytamu extends Component {
     const bearerToken = localStorage.getItem("token");
 
     axios
-      .get("http://103.93.130.122:4446/api/v1/halaman/tamu/histori?sort=tanggal_masuk", {
+      .get("http://103.93.130.122:4446/api/v1/halaman/tamu/histori?sort=-tanggal_masuk", {
         headers: {
           Authorization: `Bearer ${bearerToken}`,
         },
