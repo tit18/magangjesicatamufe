@@ -172,7 +172,7 @@ export default class Login extends React.Component {
                     localStorage.setItem("token", token);
                     localStorage.setItem("nama", nama);
 
-                    alert("Succes to Login");
+                    // alert("Succes to Login");
                     window.location.href = "/magangjesicatamufe/build/#/historytamu";
                 } else {
                     alert("Failed to Login");
