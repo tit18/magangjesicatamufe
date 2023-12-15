@@ -31,7 +31,7 @@ class Historykurir extends Component {
     const bearerToken = localStorage.getItem("token");
 
     axios
-      .get("http://103.93.130.122:4446/api/v1/halaman/kurir/histori", {
+      .get("http://103.93.130.122:4446/api/v1/halaman/kurir/histori?sort=-tanggal_datang", {
         headers: {
           Authorization: `Bearer ${bearerToken}`,
         },
